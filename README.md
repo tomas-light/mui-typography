@@ -38,5 +38,39 @@ const MyTitle: FunctionComponent = () => {
         </Typography>
     );
 };
+```
 
+# You can override default styles
+
+```tsx
+// MyAppThemeTypography.ts
+import { AppThemeTypography } from "mui-app-theme";
+
+export class MyAppThemeTypography extends AppThemeTypography {
+    constructor() {
+        super();
+        this["100"] = this.createVariant(300, 11, "15px", 0.03333);
+    }
+}
+```
+
+```tsx
+// App.tsx
+import { createAppTheme } from "mui-app-theme";
+import React, { FunctionComponent } from "react";
+import { ThemeProvider } from "@material-ui/styles";
+
+import { MyColors } from "./MyColors";
+
+const App: FunctionComponent = () => {
+    const appTheme = createAppTheme({ themeTypography: new MyAppThemeTypography() });
+
+    return (
+        <ThemeProvider theme={appTheme}>
+            {
+            // children
+            }
+        </ThemeProvider>
+    );
+};
 ```
