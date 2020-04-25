@@ -1,5 +1,6 @@
 # mui-typography
- High order component for Material-UI Typography
+ High order component for Material-UI Typography.
+ For correct work required "mui-app-theme" >= "1.2.2"
 
 # Installation
 ```bush

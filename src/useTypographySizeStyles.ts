@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/styles";
+import { StyleRules } from "@material-ui/styles/withStyles/withStyles";
 import { IAppTheme } from "mui-app-theme";
 import { SizeVariant } from "./SizeVariant";
 
@@ -17,11 +18,11 @@ export function sizeClassNameResolver(size: SizeVariant): string {
 }
 
 function generateSizeStyles(theme: IAppTheme) {
-    const styles = {};
+    const styles: StyleRules<any, string> = {};
 
-    const addSizeStyles = (size: SizeVariant) => ({
-        [sizeClassNameResolver(size)]: theme.typography[size],
-    });
+    const addSizeStyles = (size: SizeVariant) => {
+        styles[sizeClassNameResolver(size)] = theme.typography[size];
+    };
 
     allSizes.forEach((size: SizeVariant) => addSizeStyles(size));
     return styles;
