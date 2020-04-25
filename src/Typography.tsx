@@ -1,4 +1,4 @@
-import React, { CSSProperties, ElementType, FunctionComponent, Ref } from "react";
+import React, { ElementType, FunctionComponent, Ref, HtmlHTMLAttributes } from "react";
 
 import { ClassNameBuilder } from "./ClassNameBuilder";
 import { ColorVariant } from "./ColorVariant";
@@ -9,17 +9,14 @@ interface ITypographyProps {
     color?: ColorVariant;
     bold?: boolean;
     disabled?: boolean;
-    className?: string;
-    style?: CSSProperties;
     noWrap?: boolean;
 
-    id?: string;
     component?: ElementType;
 
     forwardedRef?: Ref<any>;
 }
 
-type Props = ITypographyProps;
+type Props = ITypographyProps & HtmlHTMLAttributes<HTMLParagraphElement>;
 
 const Typography: FunctionComponent<Props> = (props) => {
     const {
@@ -55,4 +52,4 @@ const Typography: FunctionComponent<Props> = (props) => {
     );
 };
 
-export { Typography, ITypographyProps as TypographyProps };
+export { Typography, Props as TypographyProps };
