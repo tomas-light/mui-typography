@@ -60,7 +60,7 @@ import { createAppTheme } from "mui-app-theme";
 import React, { FunctionComponent } from "react";
 import { ThemeProvider } from "@material-ui/styles";
 
-import { MyColors } from "./MyColors";
+import { MyAppThemeTypography } from "./MyAppThemeTypography";
 
 const App: FunctionComponent = () => {
     const appTheme = createAppTheme({ themeTypography: new MyAppThemeTypography() });
