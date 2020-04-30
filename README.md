@@ -86,6 +86,6 @@ const App: FunctionComponent = () => {
 | `bold` | boolean | false | If `true` font weight will be `400` |
 | `disabled` | boolean | false | If `true` the color will be `default` |
 | `noWrap` | boolean | false | If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis. Note that text overflow can only happen with block or inline-block level elements (the element needs to have a width in order to overflow) |
-| `forwardedRef` | Ref<any> | undefined | The ref is forwarded to the root element. |
+| `forwardedRef` | Ref\<any\> | undefined | The ref is forwarded to the root element. |
 
 
