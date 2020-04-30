@@ -74,3 +74,18 @@ const App: FunctionComponent = () => {
     );
 };
 ```
+
+# Props
+
+| name | type | default | description |
+| ------------- | ------------- | ------------- |------------- |
+| `size`  | 50 \| 100 \| 175 \| 200 \| 300 \| 400 \| 700 | 200 | font size |
+| `color` | "strong" \| "medium" \| "light" \| "disabled" \| "default" \| "default.text" \| "primary" \| "primary.text" \| "secondary" \| "secondary.text" \| "destructive" \| "destructive.text" | "medium" | font color |
+| `className` | string |  | css class name |
+| `component` | ElementType | "span" | The component used for the root node. Either a string to use a HTML element or a component. |
+| `bold` | boolean | false | If `true` font weight will be `400` |
+| `disabled` | boolean | false | If `true` the color will be `default` |
+| `noWrap` | boolean | false | If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis. Note that text overflow can only happen with block or inline-block level elements (the element needs to have a width in order to overflow) |
+| `forwardedRef` | Ref<any> | undefined | The ref is forwarded to the root element. |
+
+
